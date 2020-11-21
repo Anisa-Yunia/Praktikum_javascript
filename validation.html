@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VALIDATION</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}*
+		{
+			box-sizing: border-box;
+		}
+		form{
+			padding: 1em;
+			background: linear-gradient(rgba(32, 192, 192, 0.719),rgb(247, 204, 191));
+			border: 1px solid silver;
+			margin-top: 2rem;
+			max-width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 1em;
+		}
+		</style>
+</head>
+<body>
+
+	<center>
+		<form action=# method="POST" onsubmit="validasi()">
+			Nama Pelanggan:<br/>
+			<input type="text" required="" maxlength="30" placeholder="Nama" id="nama" name="nama"><br/><br/>
+			Email :<br/>
+			<input type="email" required="" placeholder="Email" id="email" name="email"><br/><br/>
+			Jam Keberangkatan :<br/>
+			<input type="time" required="" placeholder="Jam Keberangkatan" id="jam" name="jam"><br/><br/>
+			Tujuan Keberangkatan :<br/>
+			<input type="text" placeholder="Tujuan Keberangkatan" id="tujuan" name="tujuan"><br/><br/>
+			Jumlah Tiket<br/>
+			<input type="number" min="1" max="10" placeholder="Jumlah Tiket" id="jml_tiket" name="jml_tiket"><br/><br/>
+			<button type="submit">SUBMIT</button>
+		</form>
+	</center>
+</body>
+<script type="text/javascript">
+	function validasi() {
+		let nama = document.getElementById("nama").value;
+		let email = document.getElementById("email").value;
+		let jam = document.getElementById("jam").value;
+		let tujuan = document.getElementById("tujuan").value;
+		let jml_tiket = document.getElementById("jml_tiket").value;
+		if (nama != "" && email!="" && jam !="" && tujuan !="" && jml_tiket !="") {
+			alert("selamat pesan berhasil memesan")
+			console.log
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+
+</script>
+</html>

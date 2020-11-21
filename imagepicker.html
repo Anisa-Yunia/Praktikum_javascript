@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMAGE PICKER</title>
+</head>
+<body style="margin: 300px">
+
+	<center>
+		<select onchange="gantigambar();" id="listgambar">
+			<option value="https://cdn131.picsart.com/257618739028212.png?type=webp&to=min&r=640">PILIH KARAKTER</option>
+			<option value="https://www.kindpng.com/picc/m/470-4701381_hinata-hinata-shouyou-transparent-hd-png-download.png">Hinata</option>
+			<option value="https://www.pngitem.com/pimgs/m/232-2325232_good-smile-haikyuu-tobio-kageyama-nendoroid-action-hd.png">Kageyama</option>
+			<option value="https://cdn.store-factory.com/www.lapinourose.com/content/pdtimg_4468343hd.jpg?v=1602003725">Tsukishima</option>
+			<option value="https://images-na.ssl-images-amazon.com/images/I/61qQkGeRveL._AC_SY550_.jpg">Oikawa</option>
+			<option value="https://images.goodsmile.info/cgm/images/product/20170105/6162/43094/large/ffeb7189a739e9ab25b10d065c3cac9f.jpg">Bokuto</option>
+			<option value="https://images-na.ssl-images-amazon.com/images/I/61ITyeuCdTL._AC_SX522_.jpg">Kenma</option>
+		</select>
+	</center>
+		<br/>
+	<img src="https://cdn131.picsart.com/257618739028212.png?type=webp&to=min&r=640" style="width: 100%" id="gambar">
+
+</body>
+<script type="text/javascript">
+	function gantigambar() {
+		let gambar = document.getElementById("listgambar").value;
+		document.getElementById("gambar").src = gambar;
+		alert("Ini Gambar " + gambar);
+	}
+</script>
+</html>
